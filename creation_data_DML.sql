@@ -76,3 +76,15 @@ SELECT j.id_joueur, m.id_manche, FLOOR(RAND()*25), FLOOR(RAND()*15), FLOOR(RAND(
 FROM joueur j, manche m
 WHERE (j.id_joueur + m.id_manche) % 5 = 0 -- Algorithme simple pour distribuer 60 entrées
 LIMIT 60;
+-- 9. ROSTER (8)
+INSERT INTO roster (id_equipe, id_joueur, id_jeu, date_debut, role_joueur) VALUES 
+(6, 1, 1, '2023-01-15', 'Midlaner'),   -- Faker chez T1 sur LoL (jeu 1)
+(2, 2, 1, '2022-11-20', 'Midlaner'),   -- Caps chez G2 sur LoL (jeu 1)
+(1, 4, 1, '2021-01-10', 'Support'),    -- Saken chez KC sur LoL (jeu 1)
+(2, 10, 1, '2023-05-12', 'ADC'),       -- Hans Sama chez G2 sur LoL (jeu 1)
+(2, 11, 1, '2022-11-20', 'Support'),   -- Mikyx chez G2 sur LoL (jeu 1)
+(6, 20, 1, '2024-02-01', 'Support'),   -- BeryL chez T1 sur LoL (jeu 1)
+(3, 3, 2, '2021-10-01', 'AWPer'),      -- ZywOo chez Vitality sur CS2 (jeu 2)
+(5, 5, 2, '2019-12-20', 'Rifler'),     -- s1mple chez NaVi sur CS2 (jeu 2)
+(6, 1, 3, '2025-01-01', 'Flex'), -- Faker (id_joueur 1) joue aussi à Valorant (id_jeu 3) chez T1
+(2, 2, 3, '2025-01-01', 'Flex'); -- Caps (id_joueur 2) joue aussi à Valorant (id_jeu 3) chez G2
